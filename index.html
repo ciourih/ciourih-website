@@ -3,7 +3,7 @@
 
 <head>
 
-        <script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
@@ -58,25 +58,26 @@
 </script>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZY5FD6RYRV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZY5FD6RYRV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-ZY5FD6RYRV');
-</script>
-    
+        gtag('config', 'G-ZY5FD6RYRV');
+    </script>
+
     <meta name="google-site-verification" content="BAjvKl8FUB8miUHogu7jzvQKyqUE8ZZtfscCCy1DDsM" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>秋日義式餐館｜台中西區義大利麵與手作布丁</title>
     <meta name="description" content="秋日義式餐館位於台中西區，提供義大利麵、燉飯、香煎雞腿排、手作布丁與溫暖的用餐體驗。適合朋友聚餐、家庭用餐與台中西區義式餐廳搜尋。" />
-        <meta property="og:title" content="秋日義式餐館｜台中西區義大利麵">
-<meta property="og:description" content="白醬義大利麵、燉飯、香煎雞腿排與手作布丁">
-<meta property="og:image" content="https://ciourih-website.vercel.app/images/5D2219E9-5BB4-48B1-BF4F-B276B3F5A2C41111.PNG">
-<meta property="og:url" content="https://ciourih-website.vercel.app/">
-<meta property="og:type" content="website">
+    <meta property="og:title" content="秋日義式餐館｜台中西區義大利麵">
+    <meta property="og:description" content="白醬義大利麵、燉飯、香煎雞腿排與手作布丁">
+    <meta property="og:image"
+        content="https://ciourih-website.vercel.app/images/5D2219E9-5BB4-48B1-BF4F-B276B3F5A2C41111.PNG">
+    <meta property="og:url" content="https://ciourih-website.vercel.app/">
+    <meta property="og:type" content="website">
     <style>
         html {
             scroll-behavior: smooth;
@@ -180,6 +181,13 @@
             gap: 14px;
         }
 
+        .visit-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
         .btn {
             display: inline-block;
             padding: 13px 22px;
@@ -188,11 +196,13 @@
         }
 
         .btn-primary {
-            background: #2b2118;
-            color: #fff;
+            background: white;
+            border: 1px solid #2b2118;
+            color: #2b2118;
         }
 
         .btn-secondary {
+            background: white;
             border: 1px solid #2b2118;
             color: #2b2118;
         }
@@ -350,6 +360,28 @@
         }
 
         @media (max-width: 820px) {
+
+            .hero-card {
+                min-height: 320px;
+                border-radius: 32px;
+            }
+
+            .hero-card-text strong {
+                font-size: 28px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
             .nav-links {
                 display: none;
 
@@ -414,7 +446,7 @@
             <div class="container hero-grid">
                 <div>
                     <div class="tag">台中西區義大利麵｜燉飯｜手作布丁</div>
-                    <h1>每一道義大利麵<br />都該有記憶點</h1>
+                    <h1>每一道白醬義大利麵<br />都該有記憶點</h1>
                     <p>
                         秋日義式餐館是一間位於台中西區的溫暖系義式餐館，
                         專注義大利麵、燉飯、香煎主餐與手作布丁。
@@ -537,6 +569,15 @@
                         <p>週六至週日：11:30–21:00</p>
                         <p><strong>公休日：</strong>週二，實際以 Google 商家公告為準</p>
                         <p><strong>訂位方式：</strong>0966 860 681、LINE 或 Instagram</p>
+                        <div class="visit-buttons">
+                            <a class="btn btn-primary" href="https://maps.google.com/?q=秋日義式餐館 台中市西區大進街318號"
+                                target="_blank">
+                                立即導航
+                            </a>
+                            <a class="btn btn-secondary" href="tel:0966860681">
+                                電話訂位
+                            </a>
+                        </div>
                     </div>
                 </div>
 
