@@ -492,9 +492,11 @@
 
             body {
                 padding-bottom: 120px;
-                padding-bottom: calc(74px + env(safe-area-inset-bottom));
             }
 
+            .mobile-fixed-bar {
+                padding-bottom: calc(14px + env(safe-area-inset-bottom));
+            }
         }
     </style>
 </head>
@@ -690,7 +692,7 @@
 
             </a>
         </div>
-        
+
         <script>
             const menuButton = document.querySelector('.mobile-menu-button');
             const navLinks = document.querySelector('.nav-links');
