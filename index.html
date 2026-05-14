@@ -446,8 +446,17 @@
 
             .nav-links {
                 display: none;
-
+                position: absolute;
+                top: 70px;
+                right: 4%;
+                width: 180px;
+                background: #fffaf2;
+                padding: 18px;
+                border-radius: 18px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+                z-index: 9999;
             }
+
 
             .hero-grid,
             .cards,
@@ -722,13 +731,6 @@
                 } else {
                     navLinks.style.display = 'flex';
                     navLinks.style.flexDirection = 'column';
-                    navLinks.style.position = 'absolute';
-                    navLinks.style.top = '70px';
-                    navLinks.style.right = '20px';
-                    navLinks.style.background = '#fffaf2';
-                    navLinks.style.padding = '20px';
-                    navLinks.style.borderRadius = '20px';
-                    navLinks.style.boxShadow = '0 20px 40px rgba(0,0,0,.12)';
                     navLinks.style.gap = '14px';
                 }
             });
