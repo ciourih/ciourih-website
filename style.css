@@ -63,35 +63,36 @@
 
             object-fit: contain;
         }
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
 
-.logo img {
-    width: 56px;
-    height: 56px;
-    object-fit: contain;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
 
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-}
+        .logo img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
 
-.logo-text strong {
-    font-size: 24px;
-    color: #2b2118;
-}
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
 
-.logo-text small {
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #7b3f22;
-    margin-top: 4px;
-}
+        .logo-text strong {
+            font-size: 24px;
+            color: #2b2118;
+        }
+
+        .logo-text small {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #7b3f22;
+            margin-top: 4px;
+        }
 
         .nav-links {
             display: flex;
@@ -100,8 +101,21 @@
         }
 
         .hero {
-            padding: 42px 0 28px;
-            background: linear-gradient(135deg, #fbf7ef 0%, #efe0ca 100%);
+
+            position: relative;
+
+            padding: 120px 0 90px;
+
+            background-image:
+                linear-gradient(to right,
+                    rgba(20, 12, 8, .72),
+                    rgba(20, 12, 8, .45)),
+                url('./images/DSC_1935.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            overflow: hidden;
         }
 
         .hero-grid {
@@ -117,11 +131,20 @@
 
         .tag {
             display: inline-block;
-            padding: 6px 14px;
+            padding: 8px 16px;
+
             margin-bottom: 20px;
+
             border-radius: 999px;
-            background: #7b3f22;
-            color: #fff8ef;
+
+            background: rgba(255, 255, 255, .14);
+
+            backdrop-filter: blur(10px);
+
+            color: white;
+
+            border: 1px solid rgba(255, 255, 255, .2);
+
             font-size: 14px;
         }
 
@@ -135,7 +158,8 @@
             font-size: 19px;
             max-width: 620px;
             margin-bottom: 32px;
-            color: #5f4b3b;
+
+            color: rgba(255, 255, 255, .88);
         }
 
         .buttons {
@@ -769,7 +793,11 @@
             }
 
             h1 {
-                font-size: 42px;
+                font-size: clamp(36px, 6vw, 68px);
+                line-height: 1.12;
+                margin-bottom: 24px;
+
+                color: white;
             }
 
             .hero p {
