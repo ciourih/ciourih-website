@@ -21,6 +21,7 @@
 
             <nav class="nav-links">
 
+
                 <a href="index.html">
                     回首頁
                 </a>
@@ -38,6 +39,10 @@
                 </a>
 
             </nav>
+
+            <div class="mobile-menu-button">
+                ☰
+            </div>
 
         </div>
     </header>
@@ -61,6 +66,42 @@
         </div>
 
     </section>
+
+    <div class="food-modal" id="foodModal">
+
+        <div class="food-modal-content">
+
+            <button class="food-modal-close" id="foodModalClose">
+                ×
+            </button>
+
+            <img id="modalImage">
+
+            <div class="food-modal-body">
+
+                <h3 id="modalTitle"></h3>
+
+                <p id="modalDesc"></p>
+
+                <div class="modal-extra">
+
+                    <div class="modal-tags">
+                        <span>人氣推薦</span>
+                        <span>主廚推薦</span>
+                    </div>
+
+                    <a href="https://www.instagram.com/ciou.rih/" target="_blank" class="modal-btn">
+                        看更多餐點
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <section id="full-menu">
         <div class="container">
             <h2 class="section-title">餐點分類</h2>
@@ -516,123 +557,123 @@
         </div>
     </section>
 
-        <script>
-            const menuButton = document.querySelector('.mobile-menu-button');
-            const navLinks = document.querySelector('.nav-links');
-            const navItems = document.querySelectorAll('.nav-links a');
+    <script>
+        const menuButton = document.querySelector('.mobile-menu-button');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
 
-            menuButton.addEventListener('click', () => {
-                if (navLinks.style.display === 'flex') {
+        menuButton.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.gap = '14px';
+            }
+        });
+
+        navItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 820) {
                     navLinks.style.display = 'none';
-                } else {
-                    navLinks.style.display = 'flex';
-                    navLinks.style.flexDirection = 'column';
-                    navLinks.style.gap = '14px';
                 }
             });
-
-            navItems.forEach((item) => {
-                item.addEventListener('click', () => {
-                    if (window.innerWidth <= 820) {
-                        navLinks.style.display = 'none';
-                    }
-                });
-            });
+        });
 
 
-            const searchInput = document.getElementById('menuSearch');
+        const searchInput = document.getElementById('menuSearch');
 
-            const menuItems = document.querySelectorAll('.full-menu-item');
+        const menuItems = document.querySelectorAll('.full-menu-item');
 
-            searchInput.addEventListener('input', () => {
+        searchInput.addEventListener('input', () => {
 
-                const keyword = searchInput.value.toLowerCase();
+            const keyword = searchInput.value.toLowerCase();
 
-                menuItems.forEach((item) => {
+            menuItems.forEach((item) => {
 
-                    const text = item.innerText.toLowerCase();
+                const text = item.innerText.toLowerCase();
 
-                    if (text.includes(keyword)) {
+                if (text.includes(keyword)) {
 
-                        item.style.display = 'grid';
+                    item.style.display = 'grid';
 
-                    } else {
+                } else {
 
-                        item.style.display = 'none';
+                    item.style.display = 'none';
 
-                    }
-
-                });
+                }
 
             });
 
-            const modal = document.getElementById('foodModal');
+        });
 
-            const modalImage = document.getElementById('modalImage');
+        const modal = document.getElementById('foodModal');
 
-            const modalTitle = document.getElementById('modalTitle');
+        const modalImage = document.getElementById('modalImage');
 
-            const modalDesc = document.getElementById('modalDesc');
+        const modalTitle = document.getElementById('modalTitle');
 
-            const modalClose = document.getElementById('foodModalClose');
+        const modalDesc = document.getElementById('modalDesc');
 
-
-
-            const foodItems = document.querySelectorAll('.full-menu-item');
-
-            foodItems.forEach((item) => {
-
-                item.addEventListener('click', () => {
-
-                    const image = item.querySelector('img');
-
-                    const title = item.querySelector('strong');
-
-                    const desc = item.querySelector('p');
+        const modalClose = document.getElementById('foodModalClose');
 
 
 
-                    if (image) {
+        const foodItems = document.querySelectorAll('.full-menu-item');
 
-                        modalImage.src = image.src;
+        foodItems.forEach((item) => {
 
-                    }
+            item.addEventListener('click', () => {
 
-                    modalTitle.innerText = title ? title.innerText : '';
+                const image = item.querySelector('img');
 
-                    modalDesc.innerText = desc ? desc.innerText : '';
+                const title = item.querySelector('strong');
+
+                const desc = item.querySelector('p');
 
 
 
-                    modal.style.display = 'flex';
+                if (image) {
 
-                });
+                    modalImage.src = image.src;
+
+                }
+
+                modalTitle.innerText = title ? title.innerText : '';
+
+                modalDesc.innerText = desc ? desc.innerText : '';
+
+
+
+                modal.style.display = 'flex';
 
             });
 
+        });
 
 
-            modalClose.addEventListener('click', () => {
+
+        modalClose.addEventListener('click', () => {
+
+            modal.style.display = 'none';
+
+        });
+
+
+
+        modal.addEventListener('click', (e) => {
+
+            if (e.target === modal) {
 
                 modal.style.display = 'none';
 
-            });
+            }
+
+        });
 
 
 
-            modal.addEventListener('click', (e) => {
-
-                if (e.target === modal) {
-
-                    modal.style.display = 'none';
-
-                }
-
-            });
-
-
-
-        </script>
+    </script>
 
 
 </body>

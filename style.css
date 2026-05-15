@@ -279,16 +279,45 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+
             margin-bottom: 36px;
+
+            position: sticky;
+            top: 72px;
+
+            z-index: 50;
+
+            background: rgba(251, 247, 239, 0.92);
+
+            backdrop-filter: blur(12px);
+
+            padding: 14px 0;
+
+            border-bottom: 1px solid #eadfce;
         }
 
         .menu-tabs a {
             padding: 10px 18px;
+
+            background: white;
+
+            color: #2b2118;
+
+            border: 1px solid #eadfce;
+
+            border-radius: 999px;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            transition: .25s;
+        }
+
+        .menu-tabs a:hover {
             background: #2b2118;
             color: white;
-            border-radius: 999px;
-            font-weight: 700;
-            font-size: 14px;
+            transform: translateY(-2px);
         }
 
         .info-box {
