@@ -452,13 +452,24 @@
         }
 
         .full-menu-item {
-            display: flex;
-            justify-content: space-between;
-            gap: 24px;
+            display: grid;
+            grid-template-columns: 140px 1fr auto;
+            align-items: center;
+            gap: 20px;
+
             padding: 18px 20px;
             background: #fffaf2;
             border: 1px solid #eadfce;
             border-radius: 18px;
+
+            transition: .25s;
+        }
+
+        .full-menu-thumb {
+            width: 140px;
+            height: 140px;
+            border-radius: 18px;
+            object-fit: cover;
         }
 
         .full-menu-item strong {
@@ -830,8 +841,12 @@
                     <div class="full-menu-list">
 
                         <div class="full-menu-item">
+
+                            <img src="./images/5D2219E9-5BB4-48B1-BF4F-B276B3F5A2C41111.PNG" class="full-menu-thumb">
+
                             <div>
                                 <strong>香煎雞腿</strong>
+
                                 <p>
                                     外酥內嫩 一口滿足<br>
                                     可選醬汁：清炒／紅醬／白醬／橘醬／青醬
@@ -842,24 +857,12 @@
                                 義大利麵 NT$315<br>
                                 燉飯 NT$345
                             </span>
+
                         </div>
-
                         <div class="full-menu-item">
-                            <div>
-                                <strong>蒜香鮮蝦蛤蠣</strong>
-                                <p>
-                                    滿滿海味 爆鮮爽口<br>
-                                    可選醬汁：清炒／紅醬／白醬／橘醬／青醬
-                                </p>
-                            </div>
 
-                            <span>
-                                義大利麵 NT$325<br>
-                                燉飯 NT$355
-                            </span>
-                        </div>
+                            <img src="./images/蒜香蛤蠣去背.PNG" class="full-menu-thumb">
 
-                        <div class="full-menu-item">
                             <div>
                                 <strong>白酒蒜香蛤蠣</strong>
                                 <p>
@@ -875,6 +878,8 @@
                         </div>
 
                         <div class="full-menu-item">
+                            <img src="./images/7147D05E-996D-42C6-8E63-C51DFA8734A31.PNG" class="full-menu-thumb">
+
                             <div>
                                 <strong>台味鹹豬肉</strong>
                                 <p>
@@ -890,6 +895,8 @@
                         </div>
 
                         <div class="full-menu-item">
+                            <img src="./images/20260404_161114854_iOS1.PNG" class="full-menu-thumb">
+
                             <div>
                                 <strong>野菇培根</strong>
                                 <p>
@@ -905,6 +912,8 @@
                         </div>
 
                         <div class="full-menu-item">
+                            <img src="./images/95bb7085-3a38-4ec7-835f-44a9ea5051b8.png" class="full-menu-thumb">
+
                             <div>
                                 <strong>松露野菇</strong>
                                 <p>
@@ -920,6 +929,8 @@
                         </div>
 
                         <div class="full-menu-item">
+                            <img src="./images/80335ac4-7e72-42f8-9f7f-0f88974daa32.png" class="full-menu-thumb">
+
                             <div>
                                 <strong>義式手作肉醬</strong>
                                 <p>
@@ -935,6 +946,8 @@
                         </div>
 
                         <div class="full-menu-item">
+                            <img src="./images/紅酒燉牛臉頰肉.PNG" class="full-menu-thumb">
+
                             <div>
                                 <strong>紅酒燉牛臉頰</strong>
                                 <p>
@@ -950,6 +963,8 @@
                         </div>
 
                         <div class="full-menu-item">
+                            <img src="./images/ce1a724d-7ff2-4d75-80dd-61bd5f5a7b76.png" class="full-menu-thumb">
+
                             <div>
                                 <strong>香煎中卷</strong>
                                 <p>
@@ -965,6 +980,8 @@
                         </div>
 
                         <div class="full-menu-item">
+                            <img src="./images/0E3306FA-F3D0-4307-8CBF-181D2E86716E.JPG" class="full-menu-thumb">
+
                             <div>
                                 <strong>檸香鮭魚</strong>
                                 <p>
