@@ -201,6 +201,8 @@
             color: #2b2118;
         }
 
+
+
         .hero-card {
 
             position: relative;
@@ -709,6 +711,10 @@
 
         }
 
+        .floating-review {
+            z-index: 9999;
+        }
+
         .review-stars {
 
             color: #d89b2b;
@@ -728,10 +734,11 @@
             line-height: 1.6;
 
         }
-        .review-card{
-    position: relative;
-    z-index: 999;
-}
+
+        .review-card {
+            position: relative;
+            z-index: 999;
+        }
 
         .menu-button {
             text-align: center;
@@ -758,6 +765,19 @@
 
 
         @media (max-width: 820px) {
+
+
+            .floating-review {
+                top: -20px;
+                left: 12px;
+                right: 12px;
+
+                max-width: unset;
+
+                padding: 14px;
+
+                border-radius: 18px;
+            }
 
             .hero-card-text {
 
