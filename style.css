@@ -728,6 +728,10 @@
             line-height: 1.6;
 
         }
+        .review-card{
+    position: relative;
+    z-index: 999;
+}
 
         .menu-button {
             text-align: center;
